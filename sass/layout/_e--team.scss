@@ -1,0 +1,99 @@
+.team {
+  background-color: $color-secondary;
+  @include sectionPadding(60px, 60px);
+
+  @media screen and (min-width: 1200px) {
+    @include sectionPadding(94px, 94px);
+  }
+}
+
+.team__title {
+  margin-bottom: 30px;
+
+  @include font(null, 28px, 1.17, null);
+  text-align: center;
+
+  @media screen and (min-width: 1200px) {
+    @include font(null, 36px, null, null);
+    margin-bottom: 50px;
+  }
+}
+
+.team__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.member {
+  flex-basis: 100%;
+
+  @media screen and (min-width: 768px) {
+    flex-basis: calc((100% - 30px) / 2);
+  }
+
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc((100% - 90px) / 4);
+  }
+
+  border-radius: 0px 0px 4px 4px;
+
+  background-color: $color-base;
+
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.member__description {
+  padding-top: 30px;
+  padding-bottom: 24px;
+
+  @media screen and (min-width: 1200px) {
+    padding-bottom: 30px;
+  }
+}
+
+.member__name {
+  margin-bottom: 10px;
+
+  @include font(500, 16px, 1.19, null);
+  text-align: center;
+}
+
+.member__position {
+  margin-bottom: 16px;
+
+  color: $color-text-main;
+
+  @include font(null, 16px, 1.19, null);
+  text-align: center;
+}
+
+.social {
+  @include flexCentered($ai: null);
+}
+
+.social__item:not(:last-child) {
+  margin-right: 10px;
+}
+.social__icon {
+  @include flexCentered();
+
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+
+  color: $color-icon;
+  background-color: $color-base;
+
+  @include transition(color background-color);
+  &:hover,
+  &:focus {
+    background-color: $color-accent;
+    color: $color-base;
+  }
+}
+
+.social__logo {
+  fill: currentColor;
+}

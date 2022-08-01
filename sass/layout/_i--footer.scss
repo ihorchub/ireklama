@@ -1,0 +1,119 @@
+.container--footer {
+  @include flexCentered($ai: baseline);
+  @media screen and (max-width: 1199px) {
+    flex-wrap: wrap;
+    gap: 60px 178px;
+  }
+  @media screen and (min-width: 1200px) {
+    justify-content: space-between;
+  }
+}
+
+.footer-contacts {
+  text-align: center;
+  @media screen and (min-width: 1200px) {
+    text-align: left;
+  }
+}
+
+.logo__footer {
+  color: $color-base;
+}
+
+.address {
+  margin-top: 20px;
+
+  @include font(null, 14px, 1.71, null);
+  font-style: normal;
+}
+
+.address__item:not(:last-child) {
+  margin-bottom: 8px;
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 9px;
+  }
+}
+
+.address__map {
+  color: $color-base;
+  @include transition();
+
+  &:hover,
+  &:focus {
+    color: $color-accent;
+  }
+}
+
+.address__tel,
+.address__mail {
+  color: rgba(255, 255, 255, 0.6);
+  @include transition();
+
+  &:hover,
+  &:focus {
+    color: $color-accent;
+  }
+}
+
+.footer-socials__text,
+.footer-form__text {
+  margin-bottom: 20px;
+  @include font(700, 14px, 1.14, null);
+  text-align: center;
+  text-transform: uppercase;
+
+  color: $color-base;
+
+  @media screen and (min-width: 1200px) {
+    text-align: left;
+  }
+}
+
+.social__icon--footer {
+  color: $color-base;
+  background-color: rgba(255, 255, 255, 0.1);
+
+  @include transition(background-color);
+
+  &:hover,
+  &:focus {
+    background-color: $color-accent;
+    color: $color-base;
+  }
+}
+
+.subscribe {
+  @media screen and (min-width: 1200px) {
+    @include flexCentered($jc: null);
+  }
+}
+
+.subscribe__email {
+  padding: 15px 0 15px 16px;
+  width: calc(100vw - 30px);
+  max-width: 450px;
+
+  @include font(400, 16px, 1.25, null);
+
+  color: rgba(255, 255, 255, 0.6);
+
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  margin-bottom: 20px;
+
+  @media screen and (min-width: 1200px) {
+    max-width: 358px;
+    margin-bottom: 0;
+    margin-right: 12px;
+  }
+}
+
+.main-button--right-icon {
+  @include flexCentered();
+}
+
+.main-button__icon {
+  margin-left: 12px;
+}

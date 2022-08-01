@@ -1,0 +1,41 @@
+.directions {
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
+  @include sectionPadding(0);
+}
+
+.directions__title {
+  margin-bottom: 50px;
+
+  @include font(null, 36px, 1.17, null);
+  text-align: center;
+}
+
+.directions__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.directions__item {
+  flex-basis: calc((100% - 60px) / 3);
+  position: relative;
+}
+
+.directions__text {
+  @include flexCentered();
+  position: absolute;
+  bottom: 0;
+
+  height: 70px;
+  width: 100%;
+
+  background-color: rgba(47, 48, 58, 0.8);
+  color: $color-base;
+
+  @include font(700, 14px, 1.14, null);
+
+  text-align: center;
+  text-transform: uppercase;
+}

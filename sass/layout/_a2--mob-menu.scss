@@ -1,0 +1,113 @@
+.mob-menu {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: $color-base;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+  @include transition(transform opacity);
+}
+.is-hidden {
+  opacity: 1;
+  pointer-events: none;
+  visibility: hidden;
+
+  transform: translate(100%, -100%);
+}
+
+.mob-container {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 480px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 48px 40px;
+  overflow-y: auto;
+}
+
+.menu-btn--x {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+}
+
+.menu-nav__item {
+  margin-bottom: 32px;
+}
+
+.menu-nav__link {
+  font-size: 34px;
+  line-height: 1.17;
+  color: inherit;
+  @include transition($tp: color transform);
+  &:hover,
+  &:focus {
+    color: $color-accent;
+  }
+}
+
+.menu-nav__link--current {
+  color: $color-accent;
+}
+
+.menu-contacts {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 64px;
+}
+.menu-contacts__tel {
+  display: inline-block;
+  margin-bottom: 32px;
+
+  font-style: normal;
+  font-size: calc(15px + 4vw);
+  line-height: 1.17;
+  @media screen and (min-width: 480px) {
+    font-size: 34px;
+  }
+
+  color: $color-accent;
+}
+
+.menu-contacts__email {
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1.17;
+
+  color: $color-text-main;
+}
+
+.menu-social {
+  display: flex;
+  align-items: baseline;
+  gap: 20px;
+}
+
+.menu-social__item {
+  position: relative;
+  &:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    margin-left: 9px;
+    width: 2px;
+    height: 22px;
+    background-color: rgba(33, 33, 33, 0.2);
+  }
+}
+
+.menu-social__link {
+  font-size: calc(3px + 3vw);
+  line-height: 22px;
+  @media screen and (min-width: 480px) {
+    font-size: 18px;
+  }
+
+  color: $color-accent;
+}

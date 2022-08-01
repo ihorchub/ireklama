@@ -1,0 +1,23 @@
+.main-button {
+  @include centered();
+  min-width: 200px;
+
+  border-radius: 4px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  background-color: $color-accent;
+  color: $color-base;
+  border: none;
+  cursor: pointer;
+  display: block;
+
+  font-family: inherit;
+  @include font(700, 16px, 1.88, 0.06em);
+  @include transition(background-color);
+
+  &:hover,
+  &:focus {
+    background-color: $color-button-hover;
+  }
+}

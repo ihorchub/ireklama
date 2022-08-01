@@ -1,0 +1,32 @@
+body {
+  background-color: $color-base;
+  color: $color-title;
+
+  font-family: Roboto, sans-serif;
+  letter-spacing: 0.03em;
+}
+
+header {
+  border-bottom: 1px solid $color-line;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+
+footer {
+  @include sectionPadding(60px, 60px);
+  background-color: $color-futer;
+}
+
+h2 {
+  font-weight: 700;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  width: 100%;
+}
